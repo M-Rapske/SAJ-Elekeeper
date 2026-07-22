@@ -1,0 +1,84 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect SAJ Elekeeper",
+        "description": "Select the portal region and enter the account credentials.",
+        "data": {
+          "region": "Portal region",
+          "username": "Username or email address",
+          "password": "Password"
+        },
+        "data_description": {
+          "region": "Choose the Elekeeper web portal where the account was created."
+        }
+      },
+      "plant": {
+        "title": "Select plant",
+        "description": "Your account has more than one plant.",
+        "data": {"plant_uid": "Plant"}
+      },
+      "reauth_confirm": {
+        "title": "Reconnect SAJ Elekeeper",
+        "description": "Enter the current Elekeeper password.",
+        "data": {"password": "Password"}
+      }
+    },
+    "error": {
+      "invalid_auth": "Username, email address, or password was rejected.",
+      "cannot_connect": "Cannot connect to Elekeeper.",
+      "no_plants": "No plant is available to this Elekeeper account."
+    },
+    "abort": {
+      "already_configured": "This plant is already configured.",
+      "reauth_successful": "Reauthentication was successful."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "pv_power": {"name": "PV power"},
+      "load_power": {"name": "Load power"},
+      "grid_power": {"name": "Grid power"},
+      "battery_power": {"name": "Battery power"},
+      "self_use_power": {"name": "Self-consumption power"},
+      "battery_soc": {"name": "Battery state of charge"},
+      "battery_soh": {"name": "Battery state of health"},
+      "battery_voltage": {"name": "Battery voltage"},
+      "battery_current": {"name": "Battery current"},
+      "battery_temperature": {"name": "Battery temperature"},
+      "operating_mode": {"name": "Operating mode"},
+      "grid_direction": {"name": "Grid direction"},
+      "battery_direction": {"name": "Battery direction"},
+      "today_pv_energy": {"name": "PV energy today"},
+      "today_load_energy": {"name": "Load energy today"},
+      "today_grid_import": {"name": "Grid import today"},
+      "today_grid_export": {"name": "Grid export today"},
+      "today_battery_charge": {"name": "Battery charge today"},
+      "today_battery_discharge": {"name": "Battery discharge today"},
+      "total_pv_energy": {"name": "Total PV energy"},
+      "total_load_energy": {"name": "Total load energy"},
+      "total_grid_import": {"name": "Total grid import"},
+      "total_grid_export": {"name": "Total grid export"},
+      "total_battery_charge": {"name": "Total battery charge"},
+      "total_battery_discharge": {"name": "Total battery discharge"},
+      "device_status": {"name": "Status"},
+      "device_mode": {"name": "Operating mode"},
+      "device_power": {"name": "Power"},
+      "device_charge_energy": {"name": "Charge energy"},
+      "device_today_energy": {"name": "Energy today"},
+      "device_total_energy": {"name": "Total energy"},
+      "device_battery_soc": {"name": "Battery state of charge"},
+      "device_temperature": {"name": "Temperature"},
+      "device_alarm_count": {"name": "Alarms today"}
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "SAJ Elekeeper update interval",
+        "description": "Data is retrieved by polling; the API does not provide push updates.",
+        "data": {"scan_interval_minutes": "Update interval"}
+      }
+    }
+  }
+}

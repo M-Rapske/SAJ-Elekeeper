@@ -1,0 +1,84 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "SAJ Elekeeper verbinden",
+        "description": "Portalregion auswählen und Zugangsdaten eingeben.",
+        "data": {
+          "region": "Portalregion",
+          "username": "Benutzername oder E-Mail-Adresse",
+          "password": "Passwort"
+        },
+        "data_description": {
+          "region": "Wähle das Elekeeper-Webportal, über das das Konto angelegt wurde."
+        }
+      },
+      "plant": {
+        "title": "Anlage auswählen",
+        "description": "Das Konto enthält mehrere Anlagen.",
+        "data": {"plant_uid": "Anlage"}
+      },
+      "reauth_confirm": {
+        "title": "SAJ Elekeeper erneut verbinden",
+        "description": "Aktuelles Elekeeper-Passwort eingeben.",
+        "data": {"password": "Passwort"}
+      }
+    },
+    "error": {
+      "invalid_auth": "Benutzername, E-Mail-Adresse oder Passwort wurde abgelehnt.",
+      "cannot_connect": "Verbindung zu Elekeeper nicht möglich.",
+      "no_plants": "Für dieses Elekeeper-Konto ist keine Anlage verfügbar."
+    },
+    "abort": {
+      "already_configured": "Diese Anlage ist bereits eingerichtet.",
+      "reauth_successful": "Erneute Anmeldung erfolgreich."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "pv_power": {"name": "PV-Leistung"},
+      "load_power": {"name": "Verbrauchsleistung"},
+      "grid_power": {"name": "Netzleistung"},
+      "battery_power": {"name": "Batterieleistung"},
+      "self_use_power": {"name": "Eigenverbrauchsleistung"},
+      "battery_soc": {"name": "Batterieladezustand"},
+      "battery_soh": {"name": "Batteriegesundheit"},
+      "battery_voltage": {"name": "Batteriespannung"},
+      "battery_current": {"name": "Batteriestrom"},
+      "battery_temperature": {"name": "Batterietemperatur"},
+      "operating_mode": {"name": "Betriebsmodus"},
+      "grid_direction": {"name": "Netzrichtung"},
+      "battery_direction": {"name": "Batterierichtung"},
+      "today_pv_energy": {"name": "PV-Energie heute"},
+      "today_load_energy": {"name": "Verbrauchsenergie heute"},
+      "today_grid_import": {"name": "Netzbezug heute"},
+      "today_grid_export": {"name": "Netzeinspeisung heute"},
+      "today_battery_charge": {"name": "Batterieladung heute"},
+      "today_battery_discharge": {"name": "Batterieentladung heute"},
+      "total_pv_energy": {"name": "PV-Energie gesamt"},
+      "total_load_energy": {"name": "Verbrauchsenergie gesamt"},
+      "total_grid_import": {"name": "Netzbezug gesamt"},
+      "total_grid_export": {"name": "Netzeinspeisung gesamt"},
+      "total_battery_charge": {"name": "Batterieladung gesamt"},
+      "total_battery_discharge": {"name": "Batterieentladung gesamt"},
+      "device_status": {"name": "Status"},
+      "device_mode": {"name": "Betriebsmodus"},
+      "device_power": {"name": "Leistung"},
+      "device_charge_energy": {"name": "Ladeenergie"},
+      "device_today_energy": {"name": "Energie heute"},
+      "device_total_energy": {"name": "Energie gesamt"},
+      "device_battery_soc": {"name": "Batterieladezustand"},
+      "device_temperature": {"name": "Temperatur"},
+      "device_alarm_count": {"name": "Alarme heute"}
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "SAJ-Elekeeper-Aktualisierungsintervall",
+        "description": "Die Daten werden abgefragt; die API unterstützt keine Push-Aktualisierung.",
+        "data": {"scan_interval_minutes": "Aktualisierungsintervall"}
+      }
+    }
+  }
+}
