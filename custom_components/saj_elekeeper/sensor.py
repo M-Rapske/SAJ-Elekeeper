@@ -375,14 +375,22 @@ class _ElekeeperDeviceEntity(_ElekeeperEntity):
     @property
     def device_info(self) -> DeviceInfo:
         device = self._device()
-        model = device.model if device and device.model else "Elekeeper component"
+        model = (
+            str(device.model)
+            if device and device.model is not None
+            else "Elekeeper component"
+        )
         if device and device.is_wallbox:
-            name = device.name or f"SAJ Wallbox {self._serial[-6:]}"
-            model = device.model or "EV Charger"
+            name = (
+                str(device.name)
+                if device.name is not None
+                else f"SAJ Wallbox {self._serial[-6:]}"
+            )
+            model = str(device.model) if device.model is not None else "EV Charger"
         else:
             name = (
-                device.name
-                if device and device.name
+                str(device.name)
+                if device and device.name is not None
                 else f"SAJ {model} {self._serial[-6:]}"
             )
         return DeviceInfo(

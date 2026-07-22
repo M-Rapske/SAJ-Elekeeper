@@ -8,5 +8,5 @@
   "integration_type": "service",
   "iot_class": "cloud_polling",
   "requirements": ["pysaj-elekeeper==0.0.10"],
-  "version": "1.0.6"
+  "version": "1.0.7"
 }
